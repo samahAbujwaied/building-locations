@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 header">
+      <h1 class="mt-4">Project Creation</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="sidebar col-md-2">
+      <%= render 'side_menu/sidebar' %>
+    </div>
+    <div class="building-page col-md-9 ms-3">
+      <div class="main-content mt-3">
+        <h2 class="text-center">Building Location</h2>
+        <p class="text-center">Enter the building location for the project.</p>
+
+        <%= turbo_frame_tag "location" do %>
+          <%= render "body_container", building_locations: @building_locations %>
+        <% end %>
+      
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<%= turbo_frame_tag "modal" do %>
+  <div class="modal building-location-modal" id="buildingLocationModal" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <%= @building_location.new_record? ? "New Building Location" : "Edit Building Location" %>
+          </h5>
+          <%= link_to "", "#", class: "btn btn-close", data: { action: "click->modal#close" } %>
+        </div>
+
+        <div class="modal-body">
+          <%= render "form" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

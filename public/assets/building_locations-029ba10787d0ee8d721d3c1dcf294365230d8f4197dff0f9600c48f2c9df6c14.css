@@ -1,0 +1,76 @@
+/* line 1, app/assets/stylesheets/building_locations.scss */
+.sidebar {
+  border: 1px solid #ddd;
+}
+
+/* line 5, app/assets/stylesheets/building_locations.scss */
+.map {
+  width: 100%;
+  min-height: 400px;
+}
+
+/* line 10, app/assets/stylesheets/building_locations.scss */
+.building-page {
+  border: 1px solid #ddd;
+}
+
+/* line 14, app/assets/stylesheets/building_locations.scss */
+.link-button {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* line 23, app/assets/stylesheets/building_locations.scss */
+.blue-circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* line 32, app/assets/stylesheets/building_locations.scss */
+.list-group-item.active {
+  color: black;
+  background-color: white;
+  border-color: white;
+  padding: 0;
+}
+
+/* line 39, app/assets/stylesheets/building_locations.scss */
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding: 2em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 55, app/assets/stylesheets/building_locations.scss */
+.cancel-button {
+  background-color: #1530ff;
+  font-size: 12px;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  text-decoration: none;
+}
+
+/* line 66, app/assets/stylesheets/building_locations.scss */
+.cancel-button:hover {
+  background-color: #2640fe;
+}

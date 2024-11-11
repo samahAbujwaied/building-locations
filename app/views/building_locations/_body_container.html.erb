@@ -1,0 +1,36 @@
+<%= turbo_frame_tag "location" do %>
+  <div class="d-flex justify-content-end mb-3">
+    <% if building_locations.empty? %>
+      <%= turbo_frame_tag "modal" do %>
+        <%= link_to "New Building Location", new_building_location_path, class: "btn btn-primary", data: { turbo_frame: "modal" } %>
+      <% end %>
+    <% else %>
+      <%= turbo_frame_tag "modal" do %>
+        <%= link_to "Update Building Location", edit_building_location_path(building_locations.first), class: "btn btn-primary", data: { turbo_frame: "modal" } %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% if building_locations.empty? %>
+    <div class="mt-5 text-center alert alert-secondary bg-white">No Building Location Found</div>
+  <% else %>
+    <div class="mt-5">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= building_locations.first.location_name %></h5>
+          <p class="card-text"><strong>Address:</strong> <%= building_locations.first.address %></p>
+          <p class="card-text"><strong>Latitude:</strong> <%= building_locations.first.latitude %></p>
+          <p class="card-text"><strong>Longitude:</strong> <%= building_locations.first.longitude %></p>
+
+          <div 
+            data-controller="location"
+            data-location-target="map"
+            data-location-latitude="<%= building_locations.first.latitude %>"
+            data-location-longitude="<%= building_locations.first.longitude %>"
+            class="map-container" style="height: 300px; width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

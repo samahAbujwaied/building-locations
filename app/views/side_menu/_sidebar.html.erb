@@ -1,0 +1,9 @@
+<h5 class="mt-3">Steps</h5>
+<ul class="list-group">
+  <li class="list-group-item <%= current_page?(building_locations_path) ? 'active' : '' %>">
+    <%= link_to building_locations_path, class: "link-button" do %>
+      <span class="<%= current_page?(building_locations_path) ? 'blue-circle' : 'd-none' %>">&nbsp;</span>
+      Building Location
+    <% end %>
+  </li>
+</ul>

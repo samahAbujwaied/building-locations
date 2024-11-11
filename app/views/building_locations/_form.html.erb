@@ -1,0 +1,35 @@
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<%= form_with(model: @building_location, local: true, data: { controller: 'location', action: 'google-maps-callback@window->location#initMap' }) do |form| %>
+  <div class="form-group d-flex align-items-center">
+    <%= form.label :address, "Site Address:", class: "font-weight-bold mb-0 me-2" %> 
+    <div id="location_name_display" data-location-target="address">
+      <%= @building_location.address.presence || "N.A" %>
+    </div>
+  </div>
+
+  <div class="form-group mt-2">
+    <%= form.label :location_name, "Search" %>
+    <%= form.text_field :address, id: "autocomplete", class: "form-control", data: { location_target: "field" }, placeholder: "Enter a location" %>
+  </div>
+
+  <%= form.hidden_field :latitude, id: 'latitude', data: { location_target: "latitude" } %>
+  <%= form.hidden_field :longitude, id: 'longitude', data: { location_target: "longitude" } %>
+  <%= form.hidden_field :location_name, data: { location_target: "locationName" } %>
+
+  <div 
+    data-location-target="map"
+    data-location-latitude="<%= @building_location.latitude %>"
+    data-location-longitude="<%= @building_location.longitude %>"
+    class="map-container mt-3" style="height: 400px;">
+  </div>
+
+  <div class="modal-footer">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+    <%= link_to "Cancel", "#", class: "btn btn-secondary", data: { action: "click->modal#close" } %>
+  </div>
+<% end %>
