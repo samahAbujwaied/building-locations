@@ -1,29 +1,31 @@
-# README
+# New Building Location
+A Rails application to manage building locations with interactive map integration and Turbo links for seamless navigation.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prerequisites
+Before setting up this project, ensure you have the following installed:
 
-Things you may want to cover:
+  Ruby (version 3.1.1)
+  Rails (version 6.1.7.8)
+  Node.js and Yarn
+  Bundler (Ruby gem)
 
-* Ruby version
+# Setup
+  Follow these instructions to set up the project on your local environment.
 
-* System dependencies
+# Clone the Repository
+  * git clone git@github.com:samahAbujwaied/test-location.git
+  * new_building_location.git
+  * cd new_building_location
 
-* Configuration
+# Install Dependencies
+  * bundle install
+  * yarn install
 
-* Database creation
+# Set Up the Database
+  * rails db:create db:migrate
 
-* Database initialization
+# Start the Rails Server
+  * rails server
 
-* How to run the test suite
+Open your web browser and go to http://localhost:3000 to view the application.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-raild db:migrate
-yarn install
-bundle install
-# test-location
