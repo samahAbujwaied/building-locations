@@ -11,7 +11,7 @@ export default class extends Controller {
   }
 
   initializeMaps() {
-    const defaultLatitude = 40.7128;  // Default location: New York
+    const defaultLatitude = 40.7128; 
     const defaultLongitude = -74.0060;
 
     setTimeout(() => {
@@ -40,15 +40,12 @@ export default class extends Controller {
       const latitude = place.geometry.location.lat();
       const longitude = place.geometry.location.lng();
 
-      // Update hidden fields with new location
       this.latitudeTarget.value = latitude;
       this.longitudeTarget.value = longitude;
       this.locationNameTarget.value = place.formatted_address;
 
-      // Update the address display
       this.addressTarget.textContent = place.formatted_address;
 
-      // Update the map with the new location
       this.updateMap(place.geometry.location);
     }
   }

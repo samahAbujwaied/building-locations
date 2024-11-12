@@ -8,7 +8,6 @@ import Turbolinks from "turbolinks"
 import "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "../building_locations";
 import "./google_maps";
 import { Turbo } from "@hotwired/turbo-rails"
 

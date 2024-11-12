@@ -1,12 +1,10 @@
 <%= turbo_frame_tag "location" do %>
   <div class="d-flex justify-content-end mb-3">
-    <% if building_locations.empty? %>
-      <%= turbo_frame_tag "modal" do %>
-        <%= link_to "New Building Location", new_building_location_path, class: "btn btn-primary", data: { turbo_frame: "modal" } %>
-      <% end %>
-    <% else %>
-      <%= turbo_frame_tag "modal" do %>
-        <%= link_to "Update Building Location", edit_building_location_path(building_locations.first), class: "btn btn-primary", data: { turbo_frame: "modal" } %>
+    <%= turbo_frame_tag "modal" do %>
+      <% if building_locations.empty? %>
+        <%= link_to "New Building Location", new_building_location_path, class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Update Building Location", edit_building_location_path(building_locations.first), class: "btn btn-primary"%>
       <% end %>
     <% end %>
   </div>
@@ -27,7 +25,7 @@
             data-location-target="map"
             data-location-latitude="<%= building_locations.first.latitude %>"
             data-location-longitude="<%= building_locations.first.longitude %>"
-            class="map-container" style="height: 300px; width: 100%;">
+            class="map-container">
           </div>
         </div>
       </div>

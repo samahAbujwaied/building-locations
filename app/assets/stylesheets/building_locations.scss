@@ -20,6 +20,15 @@
   align-items: center;
 }
 
+.map-container{
+  height: 300px; 
+  width: 100%;
+}
+
+.building-location-modal{
+  display: block;
+}
+
 .blue-circle {
   display: inline-block;
   width: 16px;
@@ -29,11 +38,15 @@
   margin-right: 8px;
 }
 
+.list-group-item{
+  border: 0;
+}
+
 .list-group-item.active {
   color: black;
   background-color: white;
   border-color: white;
-  padding: 0;
+  z-index: 0;
 }
 
 .modal {
