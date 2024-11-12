@@ -13,8 +13,7 @@ Before setting up this project, ensure you have the following installed:
   Follow these instructions to set up the project on your local environment.
 
 # Clone the Repository
-  * git clone git@github.com:samahAbujwaied/test-location.git
-  * new_building_location.git
+  * git clone git@github.com:samahAbujwaied/building-locations.git
   * cd new_building_location
 
 # Install Dependencies
