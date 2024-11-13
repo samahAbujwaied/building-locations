@@ -4,8 +4,8 @@
   </div>
 <% end %>
 
-<%= form_with(model: @building_location, local: true, data: { controller: 'location', action: 'google-maps-callback@window->location#initMap' }) do |form| %>
-  <div class="form-group d-flex align-items-center">
+<%= form_with(model: @building_location, data: { controller: 'location', action: 'google-maps-callback' }) do |form| %>
+  <div class="form-group d-flex">
     <%= form.label :address, "Site Address:", class: "font-weight-bold mb-0 me-2" %> 
     <div id="location_name_display" data-location-target="address">
       <%= @building_location.address.presence || "N.A" %>
@@ -14,7 +14,7 @@
 
   <div class="form-group mt-2">
     <%= form.label :location_name, "Search" %>
-    <%= form.text_field :address, id: "autocomplete", class: "form-control", data: { location_target: "field" }, placeholder: "Enter a location" %>
+    <%= form.text_field :address, class: "form-control", data: { location_target: "field" }, placeholder: "Enter a location" %>
   </div>
 
   <%= form.hidden_field :latitude, id: 'latitude', data: { location_target: "latitude" } %>

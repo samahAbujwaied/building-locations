@@ -11,11 +11,15 @@
     </div>
     <div class="building-page col-md-9 ms-md-3">
       <div class="main-content mt-3">
-        <h2 class="text-center">Building Location</h2>
-        <p class="text-center">Enter the building location for the project.</p>
+        <% if current_page?(building_locations_path) %>
+          <h2 class="text-center">Building Location</h2>
+          <p class="text-center">Enter the building location for the project.</p>
 
-        <%= render "body_container", building_locations: @building_locations %>
-      
+          <%= render "body_container", building_locations: @building_locations %>
+        <%else%>
+          <h2 class="text-center">Welcome To The Building Location Application</h2>
+          <p class="text-center">Please select the step you want form the left menu</p>
+        <% end %>
       </div>
     </div>
   </div>

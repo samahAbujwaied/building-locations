@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.font-weight-bold{
+  font-weight: bold;
+  min-width: fit-content;
+}
+
 .map-container{
   height: 300px; 
   width: 100%;
@@ -65,17 +70,3 @@
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
-.cancel-button {
-  background-color: #1530ff;
-  font-size: 12px;
-  color: white;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  text-decoration: none;
-}
-.cancel-button:hover {
-  background-color: #2640fe;
-}

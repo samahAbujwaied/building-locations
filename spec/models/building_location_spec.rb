@@ -1,5 +1,6 @@
 require 'rails_helper'
 RSpec.describe BuildingLocation, type: :model do
+  describe 'validations' do
     context "with valid attributes" do
       it "is valid" do
         building_location = BuildingLocation.new(location_name: "Test Location", address: "123 Test Street")
@@ -28,4 +29,5 @@ RSpec.describe BuildingLocation, type: :model do
       end
     end
   end
+end
   
